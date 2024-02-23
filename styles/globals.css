@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background:#ffff;
+}
+
+
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: var(--background)
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@font-face {
+  font-family: chillax_md;
+  src: url('/font/Chillax-Medium.woff2') format('woff2'),
+       url('/font/Chillax-Medium.woff') format('woff');
+       font-style: normal;
+
+}
+
+@font-face {
+  font-family: chillax_rg;
+  src: url('/font/Chillax-Regular.woff2') format('woff2'),
+       url('/font/Chillax-Regular.woff') format('woff');
+       font-style: normal;
+}
+
+@font-face {
+  font-family: chillax_lt;
+  src: url('/font/Chillax-Light.woff2') format('woff2'),
+       url('/font/Chillax-Light.woff') format('woff');
+       font-style: normal;
+}
+
+@font-face {
+  font-family: chillax_bd;
+  src: url('/font/Chillax-Bold.woff2') format('woff2'),
+       url('/font/Chillax-Bold.woff') format('woff');
+       font-style: normal;
+}
+
+@font-face{
+  font-family: chillax_sbd;
+  src: url('/font/Chillax-SemiBold.woff2') format('woff2'),
+       url('/font/Chillax-SemiBold.woff') format('woff');
+       font-style: normal;
+}
