@@ -6,7 +6,7 @@ import Hero from "./ui/hero/hero";
 export default function Home() {
   return (
     <>
-      <main className="flex flex-col items-center min-h-screen py-[4rem] h-screen">
+      <main className="flex flex-col items-center  py-[4rem] h-screen">
         <div className="w-full h-[90%] flex flex-col sm:flex-row">
           <div className="w-full h-full md:h-[60%] lg:h-full flex-shrink md:w-[50%] md:flex-none p-2 relative">
             <Hero />
@@ -37,7 +37,7 @@ export default function Home() {
         </div>
       </main>
       <div className="w-full h-[700px] bg-black">
-
+         hh
       </div>
     </>
   );
