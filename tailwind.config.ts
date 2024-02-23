@@ -17,7 +17,8 @@ const config: Config = {
         custom: ["chillax_md","chillax_rg","chillax_bd", "chillax_lt","chillax_sbd","sans-serif"],
       },
       colors:{
-        "cream":"#F8F8F8"
+        "cream":"#F8F8F8",
+        "dark_cream":"#E1E1E1"
       }
     },
   },
