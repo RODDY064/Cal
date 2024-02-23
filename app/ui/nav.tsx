@@ -29,7 +29,7 @@ import Logo from "./logo";
 
 export default function Nav() {
   return (
-    <div className="absolute flex justify-between items-center w-[92%] ">
+    <div className="fixed top-0  flex justify-between items-center w-[95%] z-20 bg-white/20 pt-2 px-3 sm:pt-4 lg:pt-6  backdrop-blur-xl">
       <div className="w-full min-h-14 p-4  bg-cream/80 rounded-[25px] flex items-center justify-between">
          <Logo/>
          <div className="flex items-center gap-6 md:gap-[2rem]">
