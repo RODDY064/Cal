@@ -8,9 +8,11 @@ export default function SliderBar() {
 
 
     const { scrollYProgress } = useScroll({})
-    useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    /*useMotionValueEvent(scrollYProgress, "change", (latest) => {
       console.log("Page scroll: ", latest)
     })
+
+    */
      
     const y = useTransform(scrollYProgress, [0, 1], ['0%', '100%']);
     
