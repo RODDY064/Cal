@@ -14,6 +14,17 @@ body {
   background: var(--background)
 }
 
+body::-webkit-scrollbar{
+ background: transparent;
+
+}
+
+body::-webkit-scrollbar-thumb{
+  background: #E1E1E1;
+  border-radius: 30px;
+}
+
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
