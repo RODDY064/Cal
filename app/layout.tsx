@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 
 
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={'font-custom py-2 px-3 sm:py-4 sm:px-6 lg:px-10 lg:py-6 h-screen w-screen overflow-hidden relative'}>
+      <body className={'font-custom py-2 px-3 sm:py-4 sm:px-6 lg:px-10 lg:py-6 h-screen overflow-x-hidden w-screen relative'}>
         <Nav/>
         <SliderBar/>
         {children}
