@@ -3,6 +3,7 @@ import Image from "next/image";
 import { poppins } from "./ui/fonts/font";
 import AnimatedText from "./ui/animatedText/animatedText";
 import Hero from "./ui/hero/hero";
+import Discover from "./ui/discover/discover";
 
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
   return (
     <>
     
-        <main className="flex flex-col items-center  py-[4rem] h-screen">
+        <main className="flex flex-col items-center  py-[4rem]  h-screen md:px-10 xl:px-0">
           <div className="w-full h-[90%] flex flex-col sm:flex-row">
             <div className="w-full h-full md:h-[60%] lg:h-full flex-shrink md:w-[50%] md:flex-none p-2 relative">
               <Hero />
@@ -18,7 +19,7 @@ export default function Home() {
             <div className="w-full h-full flex shrink  md:shrink-0 flex-col  md:flex-none md:w-[50%] py-4 md:py-[6rem]">
               <div className="flex gap-4 text-base  items-end">
                 <h1
-                  className={`font-[200] tracking-tighter text-black/60 text-[4rem] ${poppins.className}`}>
+                  className={`font-[200] tracking-tighter text-black/60 text-[3rem]   xl:text-[4rem] ${poppins.className}`}>
                   BIG
                 </h1>
                 <div>
@@ -32,14 +33,15 @@ export default function Home() {
                 </div>
               </div>
               <h1
-                className={`font-[200] text-[4.1rem] tracking-tighter ${poppins.className}  text-black`}>
+                className={`font-[200] text-[3rem] pt-1 md:pt-0  shrink xl:text-[4.1rem] tracking-tighter ${poppins.className}  text-black`}>
                 SHORTCUTS
               </h1>
               <AnimatedText />
             </div>
           </div>
         </main>
-        <div className="w-full h-[700px] bg-black">hh</div>
+        <Discover/>
+        <div className="w-full h-[700px] bg-black"></div>
     </>
   );
 }

@@ -23,7 +23,7 @@ export default function SliderBar() {
 <div>
 <div className='w-12 flex-none h-screen fixed right-0 hidden md:flex items-center justify-center px-3'>
         <div className='w-full h-[50%] bg-black rounded-[42px] p-1'>
-            <motion.div  style={{  y }} className='w-full h-[20%] bg-white rounded-[25px]'></motion.div>
+            <motion.div  style={{  y }} className='w-full h-[50%] bg-white rounded-[25px]'></motion.div>
         </div>
     </div>
 </div>
