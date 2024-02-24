@@ -12,11 +12,11 @@ export default function Home() {
     <>
     
         <main className="flex flex-col items-center  py-[4rem]  h-screen md:px-10 xl:px-0">
-          <div className="w-full h-[90%] flex flex-col sm:flex-row">
-            <div className="w-full h-full md:h-[60%] lg:h-full flex-shrink md:w-[50%] md:flex-none p-2 relative">
+          <div className="w-full h-[90%] flex flex-col md:items-center  sm:flex-row">
+            <div className="w-full h-full md:h-[60%]  lg:justify-normal lg:h-full flex-shrink md:w-[50%] md:flex-none p-2 relative">
               <Hero />
             </div>
-            <div className="w-full h-full flex shrink  md:shrink-0 flex-col  md:flex-none md:w-[50%] py-4 md:py-[6rem]">
+            <div className="w-full h-full flex shrink md:justify-center md:shrink-0 flex-col  md:flex-none md:w-[50%] py-4 md:py-[6rem]">
               <div className="flex gap-4 text-base  items-end">
                 <h1
                   className={`font-[200] tracking-tighter text-black/60 text-[3rem]   xl:text-[4rem] ${poppins.className}`}>
@@ -41,7 +41,6 @@ export default function Home() {
           </div>
         </main>
         <Discover/>
-        <div className="w-full h-[700px] bg-black"></div>
     </>
   );
 }
