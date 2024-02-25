@@ -2,41 +2,72 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Expand } from "./animation";
+import { Leave } from "./animation";
 
-export default function Tabs() {
-  const [isAnimated, setIsAnimated] = useState<{
-    first: boolean;
-    second: boolean;
-  }>({
-    first: true,
-    second: false,
-  });
 
+export default function Tabs({ control}:{ control:any }) {
+
+  const [isMobile, setIsMobile] = useState<boolean>(false)
+  useEffect(()=>{
+    if(window.innerWidth < 760){
+      setIsMobile(true)
+    }
+
+  },[])
 
   return (
-    <div className="w-full  flex flex-col items-center gap-4  pt-5 md:px-12 xl:px-14">
-        <div className="w-full 2xl:w-[80%]  flex flex-col items-center justify-between  md:flex-row gap-4 md:gap-12">
-            <motion.div 
-             variants={Expand}
-             initial={{ width:'50%'}}
-             animate= 'show'
-             
-            className="w-full md:w-[50%] h-[17rem]  md:h-[20rem] overflow-hidden relative rounded-[35px]">
-                <Image src="/images/cal_4.jpg" fill={true} alt="discover_1" />
-            </motion.div>
-            <motion.div 
-             variants={Expand}
-             initial={{ width:'50%'}}
-             animate= 'hide'
-            className=" w-full md:w-[50%] h-[17rem] md:h-[20rem] overflow-hidden relative  rounded-[35px]">
+      <div className="w-full 2xl:w-[80%]  flex flex-col items-center justify-center  md:flex-row gap-4 md:gap-6">
+        <motion.div
+           variants={Leave}
+           animate={control}
+           whileInView={!isMobile ? { width: ["30%", "60%", "30%"] } : ""}
+           transition={{
+            type: "tween",
+            duration: 6,
+            repeat: Infinity,
+            times: [0, 0.3, 1],
+            delay: 0.5,
+          }}
+          className="w-full md:w-[50%] h-[17rem]  md:h-[20rem] overflow-hidden relative rounded-[35px]">
+          <motion.div
+            whileInView={!isMobile ? { scale: [1, 1.05, 1] } : ""}
+            initial={{ scale: 1 }}
+            transition={{
+              type: "tween",
+              duration: 6,
+              repeat: Infinity,
+              times: [0, 0.3, 1],
+              delay: 0.5,
+            }}
+            className="relative w-full h-full overflow-hidden">
+            <Image src="/images/cal_4.jpg" fill={true} alt="discover_1" />
+          </motion.div>
+        </motion.div>
+        <motion.div
+          whileInView={!isMobile ? { width: ["60%", "30%", "60%"] } : ""}
+          transition={{
+            type: "tween",
+            duration: 6,
+            repeat: Infinity,
+            times: [0, 0.3, 1],
+            delay: 0.5,
+          }}
+          className="w-full md:w-[50%] h-[17rem] md:h-[20rem] overflow-hidden relative  rounded-[35px]">
+          <motion.div
+            whileInView={!isMobile ? { scale: [1, 1.08, 1] } : ""}
+            initial={{ scale: 1 }}
+            transition={{
+              type: "tween",
+              duration: 6,
+              repeat: Infinity,
+              times: [0, 0.3, 1],
+              delay: 0.5,
+            }}
+            className="relative w-full h-full">
             <Image src="/images/cal_3.jpg" fill={true} alt="discover_2" />
-            </motion.div>
-        </div>
-        <div className="w-full py-2 h-[10rem] bg-black rounded-[30px]">
+          </motion.div>
+        </motion.div>
+      </div>
 
-        </div>
-
-    </div>
   );
 }
