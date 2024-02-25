@@ -41,6 +41,7 @@ export default function Home() {
           </div>
         </main>
         <Discover/>
+        <div className="w-full my-[10rem] h-[700px] bg-black"></div>
     </>
   );
 }
