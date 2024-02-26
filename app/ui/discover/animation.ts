@@ -31,7 +31,9 @@ export const Expand = {
         type: 'tween',
         duration: 4,
       },
+
       
+
     },
   };
   
