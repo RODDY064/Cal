@@ -44,6 +44,8 @@ export default function Tabs({ control}:{ control:any }) {
           </motion.div>
         </motion.div>
         <motion.div
+          variants={Leave}
+          animate={control}
           whileInView={!isMobile ? { width: ["60%", "30%", "60%"] } : ""}
           transition={{
             type: "tween",

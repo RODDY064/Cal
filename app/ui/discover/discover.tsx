@@ -1,48 +1,56 @@
 "use client";
 
-import { motion, useMotionValueEvent, useScroll, useAnimation } from "framer-motion";
-import { Ref, useEffect, useRef, useState } from "react";
+import {
+  motion,
+  useMotionValueEvent,
+  useScroll,
+  useAnimation,
+} from "framer-motion";
+import { useEffect, useRef, useState } from "react";
 import { Swing } from "./animation";
 import Words from "./words";
 import Tabs from "./tabs";
 import SlideUp from "./slideUp";
 
 export default function Discover() {
-
-  const [isAnimated, setIsAnimated] = useState<{first:boolean,second:boolean}>({ first:false, second:false});
-  const targetRef = useRef(null);
+  const [isAnimated, setIsAnimated] = useState<{
+    first: boolean;
+    second: boolean;
+  }>({ first: false, second: false });
+  const targetRef = useRef<HTMLDivElement>(null);
+  const unsubscribeScroll = useRef<(() => void) | null>(null); // Ref to hold the unsubscribe function
 
   const controls = useAnimation();
   const { scrollY } = useScroll({
     target: targetRef,
   });
 
-  useMotionValueEvent(scrollY, "change", (latest) => {
-    console.log(latest)
-    switch (true) {
-      case latest >= 400:
-        setIsAnimated((prev)=>({...prev,first:true}));
-        break;
-      case latest >= 700: 
-       setIsAnimated((prev)=>({...prev,second:true }));
-      break;
-      default:
-        setIsAnimated((prev)=>({...prev,first:false,second:false}));
-        break;
-    }
-  });
+  const updateAnimationState = (latest: number) => {
+    setIsAnimated((prev) => ({
+      ...prev,
+      first: latest >= 400,
+      second: latest >= 750,
+    }));
+  };
 
+  const handleScrollChange = (latest: number) => {
+    updateAnimationState(latest);
+  };
 
-  useEffect(()=>{
-    controls.start(isAnimated.second ? "show": "hide")
-    console.log(isAnimated.second, "second")
-  },[isAnimated.second])
+  useMotionValueEvent(scrollY, "change", handleScrollChange);
 
-  useEffect(()=>{
-     console.log(isAnimated.first , "first")
-  },[isAnimated.first])
+  useEffect(() => {
+    handleScrollChange(scrollY.get());
+    return () => {
+      if (unsubscribeScroll.current) {
+        unsubscribeScroll.current();
+      }
+    };
+  }, [scrollY]);
 
-
+  useEffect(() => {
+    controls.start(isAnimated.second ? "show" : "hide");
+  }, [isAnimated.second]);
 
   return (
     <div className="w-full flex flex-col items-center  h-screen snap-y snap-mandatory">
@@ -52,9 +60,11 @@ export default function Discover() {
         animate={isAnimated.first ? "show" : "hide"}
         className="w-full h-full text-center  pt-10 xl:pt-[7rem] px-2 sm:px-0  snap-always snap-center">
         <Words />
-        <div className="w-full  flex flex-col  items-center gap-4  pt-5 pb-2 md:px-12 xl:px-20">
-          <Tabs control={controls} />
-          <SlideUp/>
+        <div className="w-full py-5">
+          <div className="w-full  flex flex-col  items-center gap-4  md:px-12 xl:px-20">
+            <Tabs control={controls} />
+            <SlideUp control={controls} />
+          </div>
         </div>
       </motion.div>
     </div>

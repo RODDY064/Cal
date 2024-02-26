@@ -15,25 +15,25 @@ export const Swing = {
 
 
 export const Expand = {
-   show:{
-    width:'-30rem' ,
-    transition:{
-         type:'tween',
-         duration:4,
-         delay:2
-
-    }
-   },
-
-   hide:{
-    width:'0%',
-    transition:{
-         type:'tween',
-         duration:4,
-         delay:2    
-    }
-   }
-}
+    show: {
+      height: '30rem',
+      y:"-20rem",// Start expanding from the bottom
+      transition: {
+        type: 'tween',
+        duration: 4,
+        delay: 1.5,
+      },
+    },
+    hide: {
+      height: '10rem',
+      y: 0, // Expand from bottom to top
+      transition: {
+        type: 'tween',
+        duration: 4,
+      },
+    },
+  };
+  
 
 
  export const Leave = {
@@ -48,7 +48,8 @@ export const Expand = {
         opacity:1,
         transition:{
             type:'tween',
-            duration:2,        
+            duration:2,
+            delay:1.5      
        }
     }
 }
