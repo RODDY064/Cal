@@ -29,7 +29,7 @@ export default function Discover() {
     setIsAnimated((prev) => ({
       ...prev,
       first: latest >= 400,
-      second: latest >= 750,
+      second: latest >= 700,
     }));
   };
 
@@ -53,7 +53,8 @@ export default function Discover() {
   }, [isAnimated.second]);
 
   return (
-    <div className="w-full flex flex-col items-center  h-screen snap-y snap-mandatory">
+ <div className="w-full min-h-screen">
+      <div className="w-full flex flex-col items-center  h-screen snap-y snap-mandatory">
       <motion.div
         ref={targetRef}
         variants={Swing}
@@ -68,5 +69,6 @@ export default function Discover() {
         </div>
       </motion.div>
     </div>
+ </div>
   );
 }

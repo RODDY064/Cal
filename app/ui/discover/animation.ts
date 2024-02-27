@@ -1,4 +1,3 @@
-import { delay } from "framer-motion"
 
 export const Swing = {
     show:{

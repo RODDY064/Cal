@@ -4,6 +4,8 @@ import { poppins } from "./ui/fonts/font";
 import AnimatedText from "./ui/animatedText/animatedText";
 import Hero from "./ui/hero/hero";
 import Discover from "./ui/discover/discover";
+import { Parallax } from "react-scroll-parallax";
+import ParallaxDiv from "./ui/parallax/parallax";
 
 
 export default function Home() {
@@ -40,8 +42,7 @@ export default function Home() {
             </div>
           </div>
         </main>
-        <Discover/>
-        <div className="w-full my-[10rem] h-[700px] bg-black"></div>
+      <ParallaxDiv/>
     </>
   );
 }
