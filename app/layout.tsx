@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "@styles/globals.css";
 import Nav from "./ui/nav";
 import SliderBar from "./ui/slideTracker/sliderBar";
+import Providers from "./ui/parallax/providers";
 
 
 
@@ -22,7 +23,7 @@ export default function RootLayout({
       <body className={'font-custom py-2 px-3 sm:py-4 sm:px-6 lg:px-10 lg:py-6 h-screen overflow-x-hidden w-screen relative'}>
         <Nav/>
         <SliderBar/>
-        {children}
+        <Providers>{children}</Providers>
         </body>
     </html>
   );
