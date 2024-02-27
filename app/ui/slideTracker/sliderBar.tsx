@@ -1,10 +1,10 @@
 "use client"
 
-import { useScroll, useSpring , motion , useTransform , useMotionValueEvent } from "framer-motion"
-import { useEffect, useRef } from "react";
+import { useScroll, motion , useTransform  } from "framer-motion"
 
 
 export default function SliderBar() {
+
 
 
     const { scrollYProgress } = useScroll({})
