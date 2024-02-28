@@ -29,7 +29,7 @@ export default function Discover() {
     setIsAnimated((prev) => ({
       ...prev,
       first: latest >= 400,
-      second: latest >= 700,
+      second: latest >= 820,
     }));
   };
 
