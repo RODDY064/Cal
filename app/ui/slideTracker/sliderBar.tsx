@@ -3,6 +3,7 @@
 import { useScroll, motion , useTransform  } from "framer-motion"
 
 
+
 export default function SliderBar() {
 
 

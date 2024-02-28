@@ -6,6 +6,9 @@ import { Expand } from "./animation"
 export default function SlideUp({ control}:{ control:any} ) {
 
 
+
+  
+
   return (
     <motion.div
     variants={Expand}
