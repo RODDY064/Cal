@@ -64,7 +64,7 @@ export default function Discover() {
         <div className="w-full py-5">
           <div className="w-full  flex flex-col  items-center gap-4  md:px-12 xl:px-20">
             <Tabs control={controls} />
-            <SlideUp control={controls} />
+            <SlideUp control={controls} reshape={isAnimated.second} />
           </div>
         </div>
       </motion.div>
