@@ -6,6 +6,7 @@
 import { motion } from "framer-motion";
 import { Expand, MoveDown, MoveFromTop } from "./animation";
 import Image from "next/image";
+import Calculator from "./calculator";
 
 export default function SlideUp({
   control,
@@ -26,12 +27,12 @@ export default function SlideUp({
           variants={MoveFromTop}
           animate={control}
           initial="hide"
-          className="w-full h-full absolute " >
-          <div className="flex gap-2 flex-col items-center sm:flex-row sm:w-[80%] h-full p-4">
-            <div className="w-full sm:w-[50%] h-[20rem] sm:h-full relative bg-blue-400">
-              {/* Content */}
+          className="w-full h-full absolute flex items-center justify-center" >
+          <div className="w-full flex gap-2 flex-col items-center justify-center sm:flex-row sm:w-[80%] h-full p-4">
+            <div className="w-full sm:w-[50%] h-[50%] sm:h-full flex items-center justify-center">
+             <Calculator/>
             </div>
-            <div className="w-full sm:w-[50%] h-[20rem] sm:h-full relative bg-blue-400">
+            <div className="w-full sm:w-[50%] h-[50%] sm:h-full">
               {/* Content */}
             </div>
           </div>
