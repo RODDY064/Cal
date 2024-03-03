@@ -62,7 +62,7 @@ export default function Discover() {
         className="w-full h-full text-center  pt-10 xl:pt-[7rem] px-2 sm:px-0  snap-always snap-center">
         <Words />
         <div className="w-full py-5">
-          <div className="w-full  flex flex-col  items-center gap-4  md:px-12 xl:px-20">
+          <div className="w-full  flex flex-col  items-center gap-4  md:px-12 xl:pt-20">
             <Tabs control={controls} />
             <SlideUp control={controls} reshape={isAnimated.second} />
           </div>

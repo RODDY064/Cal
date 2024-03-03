@@ -1,4 +1,5 @@
 // Description: This file contains the animation for the discover page.
+
 export const Swing = {
     show:{
         y:0,
@@ -14,32 +15,6 @@ export const Swing = {
 
 
 
-
-
-
-export const Expand = {
-    show: {
-      height: '30rem',
-      y:"-20rem",// Start expanding from the bottom
-      transition: {
-        type: 'tween',
-        duration: 4,
-        delay: 1.5,
-      },
-    },
-    hide: {
-      height: '10rem',
-      y: 0, // Expand from bottom to top
-      transition: {
-        type: 'tween',
-        duration: 4,
-      },
-
-      
-
-    },
-  };
-  
 
 
  export const Leave = {
