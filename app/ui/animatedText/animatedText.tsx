@@ -36,7 +36,7 @@ export default function AnimatedText() {
           />
         </div>
         <div>
-          <h1 className="font-[600] text-6xl lg:text-8xl">L<span>0</span>UDER</h1>
+          <h1 id="text_word" className="font-[600] text-6xl lg:text-8xl">L<span>0</span>UDER</h1>
         </div>
       </div>
      <div className="relative flex md:w-[90%]">
@@ -46,7 +46,7 @@ export default function AnimatedText() {
     transition={{ type: 'tween', duration: 3, ease: 'easeOut', repeat: Infinity, repeatType: 'loop', repeatDelay: 2 }}
     className="h-full absolute bg-dark_cream rounded-[5px] "
      ></motion.div>
-     <h1 className="font-[600] text-6xl lg:text-8xl tracking-tighter z-10">WORKFLOW.</h1>
+     <h1 id="text_word" className="font-[600] text-6xl lg:text-8xl tracking-tighter z-10">WORKFLOW.</h1>
      </div>
     </>
   );

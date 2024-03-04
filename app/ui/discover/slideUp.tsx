@@ -64,7 +64,7 @@ export default function SlideUp({
             <div className="w-full sm:w-[50%] h-[50%] sm:h-full flex items-center justify-center">
               <Calculator />
             </div>
-            <div className="w-full sm:w-[50%] h-[50%] sm:h-full py-2 sm:py-[4rem] px-4 sm:px-14 flex items-center justify-center">
+            <div className="w-full sm:w-[50%] h-[50%] sm:h-full py-2 sm:py-[4rem] px-2 sm:px-14 flex items-center justify-center">
               <CalText />
             </div>
           </div>

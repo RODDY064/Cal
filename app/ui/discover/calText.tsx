@@ -5,7 +5,7 @@ import { poppins } from "../fonts/font";
 
 export default function CalText() {
   return (
-    <div className="w-full h-full text-start">
+    <div className=" h-full text-start ">
       <div className="w-full flex justify-start">
         <div className="flex gap-[2px] items-center justify-center">
           <Image src="/icons/x_w.svg" width={20} height={20} alt="x" className="rotate-12"/>
@@ -27,7 +27,7 @@ export default function CalText() {
         <h3 className={`font-[100] text-white/40 ${poppins.className}} `}>PRICE</h3>
         <div className="flex gap-4 items-center ">
             <h1 className="font-custom font-[600] text-white text-3xl">$139<span className="text-white/40">.00</span></h1>
-            <div className="w-[7rem] font-[600] text-lg h-12 rounded-[25px] bg-white text-black p-2 flex items-center justify-center">
+            <div className="w-[7rem] cursor-pointer font-[600] text-lg h-12 rounded-[25px] bg-white text-black p-2 flex items-center justify-center">
                 Pre Order
             </div>
         </div>

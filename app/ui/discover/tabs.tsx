@@ -15,6 +15,7 @@ export default function Tabs({ control}:{ control:any }) {
 
   },[])
 
+  
   return (
       <div className="w-full 2xl:w-[80%]  flex flex-col items-center justify-center  md:flex-row gap-4 md:gap-6">
         <motion.div
