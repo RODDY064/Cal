@@ -76,7 +76,8 @@ export default function SlideUp({
           <Image
             src="/images/cal_7.png"
             fill={true}
-            alt=""
+            alt="calculator"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="object-cover"
           />
         </motion.div>

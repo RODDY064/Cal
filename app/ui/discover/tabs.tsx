@@ -41,7 +41,11 @@ export default function Tabs({ control}:{ control:any }) {
               delay: 0.5,
             }}
             className="relative w-full h-full overflow-hidden">
-            <Image src="/images/cal_4.jpg" fill={true} alt="discover_1" />
+            <Image 
+            src="/images/cal_4.jpg" 
+            fill={true} 
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            alt="discover_1" />
           </motion.div>
         </motion.div>
         <motion.div
@@ -67,7 +71,11 @@ export default function Tabs({ control}:{ control:any }) {
               delay: 0.5,
             }}
             className="relative w-full h-full">
-            <Image src="/images/cal_3.jpg" fill={true} alt="discover_2" />
+            <Image 
+            src="/images/cal_3.jpg" 
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            fill={true} 
+            alt="discover_2" />
           </motion.div>
         </motion.div>
       </div>
