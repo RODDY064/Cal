@@ -1,6 +1,8 @@
 # Cal 📅 
 
-Welcome to the Calendar Landing Page project! This project aims to create a simple and intuitive landing page for a calendar application. The landing page serves as the entry point for users to learn about the features of the calendar application and encourages them to sign up or explore further.
+Welcome to Cal the Calculator Landing Page project! This project aims to create a simple and intuitive landing page for a calculator application. The landing page serves as the entry point for users to learn about the features of the calculator application and encourages them to try it out or explore further.
+
+
 
 ## Features 
 
